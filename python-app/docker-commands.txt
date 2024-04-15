@@ -1,0 +1,13 @@
+---------------------
+Build Image
+---------------------
+
+docker build  .
+
+---------------------
+Run Container
+---------------------
+
+docker ps -a
+docker run -i -t IMAGE_ID
+docker run -a -i -t IMAGE_NAME
