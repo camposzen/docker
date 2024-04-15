@@ -1,0 +1,23 @@
+
+#####################
+# Remote connect
+
+chmod 400 example-1.pem
+ssh -i "example-1.pem" ec2-user@ec2-34-227-178-184.compute-1.amazonaws.com
+
+#####################
+# Install docker
+
+sudo yum update -y
+sudo yum -y install docker
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+
+logoff
+login
+
+sudo systemctl enable docker
+docker version
+
+#####################
+# 
