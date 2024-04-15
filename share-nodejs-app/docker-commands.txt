@@ -1,0 +1,21 @@
+---------------------
+Build Image
+---------------------
+
+docker build -t camposzen/just4fun:latest .
+
+---------------------
+Share Image
+---------------------
+
+docker login
+
+docker push camposzen/just4fun:latest
+
+---------------------
+Run Container
+---------------------
+
+docker pull camposzen/just4fun:latest
+
+docker run -d  --rm -p 3000:8000 camposzen/just4fun:latest
