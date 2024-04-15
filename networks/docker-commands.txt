@@ -1,0 +1,18 @@
+---------------------
+Create Network
+---------------------
+
+docker network create favorites-net
+
+---------------------
+Build Image
+---------------------
+
+docker build -t favorites-node .
+
+---------------------
+Run Container
+---------------------
+
+docker run --name mongodb --network favorites-net -d --rm -p 3000:3000 mongo
+docker run --name favorites --network favorites-net -d --rm -p 3000:3000 favorites-node
